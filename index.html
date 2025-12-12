@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brae Cottage - A peaceful B&B retreat in Winster, Peak District National Park. Experience exceptional hospitality, homely accommodation, and beautiful gardens.">
+    <meta name="keywords" content="Brae Cottage, Winster, Peak District, B&B, Bed and Breakfast, accommodation, getaway">
+    <meta property="og:title" content="Brae Cottage - Peak District B&B">
+    <meta property="og:description" content="A peaceful B&B retreat in Winster, Peak District National Park.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=90">
+    <meta property="og:url" content="https://www.braecottage.co.uk">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
+    <title>Brae Cottage - Peak District B&B | Winster, Derbyshire</title>
+    <link rel="stylesheet" href="styles-new.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Brae Cottage</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#accommodation" class="nav-link">Accommodation</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">Welcome to Brae Cottage</h1>
+            <p class="fade-in-delay">A peaceful retreat in the heart of the Peak District</p>
+            <a href="#contact" class="btn btn-primary fade-in-delay-2">Book Your Stay</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+
+        <!-- AI Chatbot Widget -->
+        <div class="chatbot-widget" id="chatbotWidget">
+            <div class="chatbot-header">
+                <div class="chatbot-header-content">
+                    <div class="chatbot-avatar">🏡</div>
+                    <div class="chatbot-title">
+                        <h4>Brae Cottage Assistant</h4>
+                        <p class="chatbot-status">Online</p>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <div class="message-avatar">🏡</div>
+                    <div class="message-content">
+                        <p>Hello! I'm your Brae Cottage assistant. How can I help you today?</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-suggestions" id="chatbotSuggestions">
+                <button class="suggestion-chip" data-question="availability">Check Availability</button>
+                <button class="suggestion-chip" data-question="breakfast">Breakfast Menu</button>
+                <button class="suggestion-chip" data-question="location">Directions</button>
+                <button class="suggestion-chip" data-question="amenities">Amenities</button>
+            </div>
+            
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+                <button class="chatbot-send" id="chatbotSend">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chatbot Toggle Button -->
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <svg class="chat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span class="chatbot-badge">1</span>
+        </button>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>A True Getaway Experience</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="intro-text">
+                        Nestled in the charming village of Winster in the Peak District National Park, 
+                        Brae Cottage offers a genuine escape from the modern world.
+                    </p>
+                    <p>
+                        Our small, highly-rated B&B is known for welcoming hosts, exceptional breakfasts, 
+                        and homely accommodation surrounded by beautiful gardens. Here, you'll find no 
+                        internet or mobile signal — just the tranquility of nature and the warmth of 
+                        genuine hospitality.
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">🏡</div>
+                            <h3>Homely Comfort</h3>
+                            <p>Cozy accommodation in a separate annex with two beautifully appointed rooms</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🍳</div>
+                            <h3>Exceptional Breakfast</h3>
+                            <p>Start your day with our renowned homemade breakfast featuring local ingredients</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🌸</div>
+                            <h3>Beautiful Gardens</h3>
+                            <p>Relax in our stunning gardens, perfect for morning coffee or evening reflection</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🥾</div>
+                            <h3>Prime Location</h3>
+                            <p>Walking distance to local pub and Peak District trails</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodation Section -->
+    <section class="accommodation" id="accommodation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Accommodation</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="accommodation-content">
+                <!-- Room 1 -->
+                <div class="room-card">
+                    <div class="room-image" role="img" aria-label="The Garden Suite Interior" style="background-image: url('https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80');">
+                        <div class="room-price">£95 <span>/ night</span></div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>The Garden Suite</h3>
+                            <div class="room-specs">
+                                <span class="spec-item">👥 Sleeps 2</span>
+                                <span class="spec-item">🛏️ King Bed</span>
+                                <span class="spec-item">🚿 En-suite</span>
+                            </div>
+                        </div>
+                        <p>A spacious ground-floor suite with direct access to the garden. Features a luxurious king-size bed and a modern en-suite bathroom with a walk-in shower.</p>
+                        <ul class="amenities-list">
+                            <li>Selection of Books</li>
+                            <li>Board Games</li>
+                            <li>Tea/Coffee Station</li>
+                            <li>Garden Access</li>
+                            <li>Toiletries</li>
+                            <li>Hairdryer</li>
+                        </ul>
+                        <div class="room-actions">
+                            <a href="#contact" class="btn btn-primary btn-sm">Book Now</a>
+                            <a href="#gallery" class="btn btn-outline btn-sm">View Photos</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card">
+                    <div class="room-image" role="img" aria-label="The Village View Room Interior" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80');">
+                        <div class="room-price">£85 <span>/ night</span></div>
+                    </div>
+                    <div class="room-details">
+                        <div class="room-header">
+                            <h3>The Village View</h3>
+                            <div class="room-specs">
+                                <span class="spec-item">👥 Sleeps 2</span>
+                                <span class="spec-item">🛏️ Twin/Super King</span>
+                                <span class="spec-item">🛁 Private Bath</span>
+                            </div>
+                        </div>
+                        <p>A charming upstairs room offering sweeping views of Winster village. Can be configured as twin beds or a super-king. Includes a private bathroom with bathtub.</p>
+                        <ul class="amenities-list">
+                            <li>Radio / Speaker</li>
+                            <li>Local Guidebooks</li>
+                            <li>Tea/Coffee Station</li>
+                            <li>Village Views</li>
+                            <li>Toiletries</li>
+                            <li>Bathrobes</li>
+                        </ul>
+                        <div class="room-actions">
+                            <a href="#contact" class="btn btn-primary btn-sm">Book Now</a>
+                            <a href="#gallery" class="btn btn-outline btn-sm">View Photos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" role="img" aria-label="Beautiful Gardens" style="background: url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80') center/cover;">
+                    <div class="gallery-overlay">
+                        <span>Beautiful Gardens</span>
+                    </div>
+                </div>
+                <div class="gallery-item" role="img" aria-label="Delicious Breakfast" style="background: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80') center/cover;">
+                    <div class="gallery-overlay">
+                        <span>Delicious Breakfast</span>
+                    </div>
+                </div>
+                <div class="gallery-item" role="img" aria-label="Cozy Guest Room" style="background: url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&q=80') center/cover;">
+                    <div class="gallery-overlay">
+                        <span>Cozy Guest Room</span>
+                    </div>
+                </div>
+                <div class="gallery-item" role="img" aria-label="Charming Village" style="background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80') center/cover;">
+                    <div class="gallery-overlay">
+                        <span>Charming Village</span>
+                    </div>
+                </div>
+                <div class="gallery-item" role="img" aria-label="Peak District Views" style="background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80') center/cover;">
+                    <div class="gallery-overlay">
+                        <span>Peak District Views</span>
+                    </div>
+                </div>
+                <div class="gallery-item" role="img" aria-label="Countryside Walks" style="background: url('https://images.unsplash.com/photo-1464207687429-7505649dae38?w=600&q=80') center/cover;">
+                    <div class="gallery-overlay">
+                        <span>Countryside Walks</span>
+                    </div>
+                </div>
+            </div>
+            <p class="gallery-note">* Images are placeholders. Actual photos of Brae Cottage to be added.</p>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-header">
+                <h2>Location</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Find Us</h3>
+                    <div class="address">
+                        <p><strong>Brae Cottage</strong></p>
+                        <p>East Bank</p>
+                        <p>Winster</p>
+                        <p>Peak District National Park</p>
+                        <p>DE4 2DT</p>
+                        <p>England</p>
+                    </div>
+                    <div class="location-details">
+                        <h4>Getting Here</h4>
+                        <p>Winster is a picturesque village in the Peak District National Park, 
+                           easily accessible from major cities:</p>
+                        <ul>
+                            <li>Manchester: Approximately 1 hour drive</li>
+                            <li>Sheffield: Approximately 45 minutes drive</li>
+                            <li>Derby: Approximately 30 minutes drive</li>
+                            <li>Nottingham: Approximately 1 hour drive</li>
+                        </ul>
+                        <p class="parking-info">
+                            <strong>Parking:</strong> Private parking available on-site
+                        </p>
+                    </div>
+                    <div class="nearby">
+                        <h4>Nearby Attractions</h4>
+                        <ul>
+                            <li>Historic Winster village center - walking distance</li>
+                            <li>Local traditional pub - walking distance</li>
+                            <li>Peak District walking trails - on your doorstep</li>
+                            <li>Chatsworth House - short drive</li>
+                            <li>Matlock Bath - nearby</li>
+                            <li>Haddon Hall - close by</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2395.8762344!2d-1.62869!3d53.13045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a2e9c5e8f8f8f%3A0x0!2zNTPCsDA3JzQ5LjYiTiAxwrAzNyc0My4zIlc!5e0!3m2!1sen!2suk!4v1234567890!5m2!1sen!2suk" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0; border-radius: 20px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Guest Reviews</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">
+                        "A wonderful escape from the hustle and bustle. The hosts were incredibly 
+                        welcoming, and the breakfast was outstanding. The lack of signal was actually 
+                        a blessing - we truly disconnected and enjoyed the beautiful Peak District."
+                    </p>
+                    <p class="reviewer">- Sarah M., TripAdvisor</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">
+                        "Absolutely charming B&B with the most delightful hosts. The rooms are 
+                        comfortable and spotlessly clean, and the gardens are stunning. Perfect base 
+                        for exploring the Peak District."
+                    </p>
+                    <p class="reviewer">- John & Mary T., TripAdvisor</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">
+                        "Exceptional hospitality and a genuine home-away-from-home feel. The breakfast 
+                        was incredible, and we loved being able to walk to the local pub. Highly 
+                        recommend for anyone seeking peace and quiet!"
+                    </p>
+                    <p class="reviewer">- Emma R., TripAdvisor</p>
+                </div>
+            </div>
+            <p class="tripadvisor-note">Highly rated on TripAdvisor</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact & Booking Enquiry</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:stay@braecottageskye.co.uk">stay@braecottageskye.co.uk</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <strong>Phone</strong>
+                                <p><a href="tel:01470521245">01470 521245</a></p>
+                                <p><a href="tel:07932329603">07932 329603</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong>Address</strong>
+                                <p>Brae Cottage, East Bank<br>
+                                   Winster, Peak District<br>
+                                   DE4 2DT, England</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-note">
+                        <p><strong>Please Note:</strong> Due to our rural location, there is no 
+                        internet or mobile signal at Brae Cottage. We check emails and messages 
+                        regularly when we're in signal range and will respond as soon as possible.</p>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Booking Enquiry Form</h3>
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkin">Check-in Date *</label>
+                                <input type="date" id="checkin" name="checkin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout">Check-out Date *</label>
+                                <input type="date" id="checkout" name="checkout" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests *</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Select...</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message / Special Requirements</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                        <p class="form-note">* Required fields</p>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <div class="success-icon">✓</div>
+                        <h3>Thank You!</h3>
+                        <p>Your enquiry has been received. We'll get back to you as soon as possible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Brae Cottage</h3>
+                    <p>A peaceful Peak District retreat</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#accommodation">Accommodation</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:stay@braecottageskye.co.uk">stay@braecottageskye.co.uk</a></p>
+                    <p>Phone: 01470 521245</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Brae Cottage. All rights reserved.</p>
+                <p class="footer-credit">Website by <strong>Cogniq</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
