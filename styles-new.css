@@ -1994,6 +1994,17 @@ ul {
 }
 
 @media (max-width: 640px) {
+    .hero {
+        min-height: 100vh;
+        padding: 80px 0 40px;
+        background-attachment: scroll;
+    }
+    
+    .hero-content {
+        padding: 20px;
+        max-width: 100%;
+    }
+    
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -2039,7 +2050,8 @@ ul {
         width: calc(100% - 40px);
         right: 20px;
         bottom: 90px;
-        height: 60vh;
+        height: 70vh;
+        max-height: 70vh;
     }
 }
 
@@ -2148,7 +2160,10 @@ ul {
     100% {
         opacity: 0;
     }
-    
+}
+
+/* Additional 480px breakpoint styles */
+@media (max-width: 480px) {
     .suggestion-chip {
         font-size: 0.75rem;
         padding: 8px 12px;
@@ -2173,5 +2188,42 @@ ul {
     
     .feature-item {
         padding: 25px 20px;
+    }
+    
+    /* Hero mobile optimization */
+    .hero {
+        min-height: 100vh;
+        background-attachment: scroll;
+    }
+    
+    .hero-content {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    /* Chatbot full optimization */
+    .chatbot-widget {
+        width: 100vw !important;
+        height: 100vh !important;
+        max-height: 100vh !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        border-radius: 0 !important;
+    }
+    
+    .chatbot-messages {
+        padding: 12px;
+        max-height: calc(100vh - 180px);
+    }
+    
+    .chatbot-input-area {
+        padding: 15px;
+    }
+    
+    .suggestion-chips {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px 12px;
     }
 }
