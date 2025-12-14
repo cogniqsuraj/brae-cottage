@@ -413,10 +413,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ========================================
+    // Clear Chat Functionality
+    // ========================================
+
+    const chatbotClear = document.getElementById('chatbotClear');
+    
+    chatbotClear.addEventListener('click', function() {
+        // Remove all messages except the initial greeting
+        const messages = chatbotMessages.querySelectorAll('.chatbot-message');
+        messages.forEach((msg, index) => {
+            if (index > 0) { // Keep the first message (greeting)
+                msg.remove();
+            }
+        });
+        
+        // Optional: Show a brief notification
+        const notification = document.createElement('div');
+        notification.textContent = 'Chat cleared';
+        notification.style.cssText = `
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            z-index: 10000;
+            animation: fadeOut 2s forwards;
+        `;
+        chatbotWidget.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.remove();
+        }, 2000);
+    });
+
+    // ========================================
     // AI Response Logic (Gemini Integration)
     // ========================================
 
-    const API_KEY = "AIzaSyBtNlyVc4pKoa1-t3UJgfc3F2PYy-O7pg0";
+    const API_KEY = "AIzaSyCC5L2GuIUAaamORbvyEoBXydCTjEaNXyA";
 
 async function getAIResponse(userMessage) {
     const cottageInfo = `You are the friendly AI assistant for Brae Cottage, a cozy B&B in Winster, Peak District.
@@ -701,7 +739,7 @@ async function getAIResponse(userMessage) {
     scrollTopBtn.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'auto'
         });
     });
 
@@ -772,3 +810,53 @@ window.BraeCottage = {
         }
     }
 };
+
+// ========================================
+// Lazy Loading Background Images
+// ========================================
+
+function initLazyBackgrounds() {
+    const lazyBgElements = document.querySelectorAll('.lazy-bg');
+    
+    if (!lazyBgElements.length) return;
+    
+    // Determine if mobile device
+    const isMobile = window.innerWidth <= 768;
+    
+    // Create Intersection Observer
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                const bgUrl = isMobile ? element.dataset.bgMobile : element.dataset.bgDesktop;
+                
+                // Preload image for smooth loading
+                const img = new Image();
+                img.onload = () => {
+                    element.style.backgroundImage = `url('${bgUrl}')`;
+                    element.style.backgroundSize = 'cover';
+                    element.style.backgroundPosition = 'center';
+                    element.classList.add('loaded');
+                };
+                img.src = bgUrl;
+                
+                // Stop observing this element
+                observer.unobserve(element);
+            }
+        });
+    }, {
+        rootMargin: '50px' // Start loading 50px before element enters viewport
+    });
+    
+    // Observe all lazy background elements
+    lazyBgElements.forEach(element => {
+        imageObserver.observe(element);
+    });
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLazyBackgrounds);
+} else {
+    initLazyBackgrounds();
+}
