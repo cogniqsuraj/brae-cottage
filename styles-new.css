@@ -2217,26 +2217,49 @@ ul {
     }
     
     .chatbot-input-area {
-        padding: 12px 14px 16px;
+        padding: 12px 14px 16px !important;
         background: #ffffff;
         border-top: 1px solid #e8ecf0;
+        display: flex !important;
+        gap: 10px;
+        align-items: center;
+        flex-direction: row !important;
     }
     
     .chatbot-input {
         font-size: 0.9rem;
         padding: 11px 14px;
         border-radius: 20px;
+        flex: 1;
+        min-width: 0;
     }
     
     .chatbot-send {
-        width: 42px;
-        height: 42px;
-        flex-shrink: 0;
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        min-height: 42px !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #1a5f4f 0%, #2d8b6f 100%) !important;
+        border: none;
+        border-radius: 50%;
+        color: #ffffff;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
     }
     
     .chatbot-send svg {
         width: 18px;
         height: 18px;
+        display: block;
+        fill: currentColor;
+        stroke: currentColor;
+    }
+        stroke: currentColor;
     }
     
     /* Room cards */
