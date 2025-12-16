@@ -4,7 +4,7 @@
 
 const GeminiAPI = {
     // Cloudflare Worker URL (API key is stored securely in Cloudflare)
-    WORKER_URL: "https://brae-cottage.cogniqsuraj.workers.dev",
+    WORKER_URL: "https://brae-api.cogniqsuraj.workers.dev",
 
     async getAIResponse(userMessage) {
         try {
