@@ -1,3 +1,0 @@
-const CONFIG = {
-    API_KEY: "AIzaSyBKw2qpelKU8OHS6p17PMBP6e4jHvHfMHY"
-};
