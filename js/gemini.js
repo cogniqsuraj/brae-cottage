@@ -3,9 +3,8 @@
 // ========================================
 
 const GeminiAPI = {
-    // TODO: Replace with your deployed Cloudflare Worker URL
-    // After deploying, it will look like: https://brae-cottage-api.YOUR_SUBDOMAIN.workers.dev
-    WORKER_URL: "https://brae-cottage-api.YOUR_SUBDOMAIN.workers.dev",
+    // Cloudflare Worker URL (API key is stored securely in Cloudflare)
+    WORKER_URL: "https://brae-cottage.cogniqsuraj.workers.dev",
 
     async getAIResponse(userMessage) {
         try {
