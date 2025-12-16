@@ -1,0 +1,5 @@
+{
+  "name": "brae-cottage-api",
+  "main": "cloudflare-worker/worker.js",
+  "compatibility_date": "2024-01-01"
+}
