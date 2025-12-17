@@ -206,6 +206,23 @@ ul {
     padding: 18px 20px;
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
 .nav-brand h2 {
     font-family: var(--font-heading);
     background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
@@ -214,6 +231,7 @@ ul {
     background-clip: text;
     font-size: 1.75rem;
     font-weight: 700;
+    margin: 0;
 }
 
 .nav-menu {
@@ -1893,6 +1911,15 @@ ul {
         background-attachment: scroll;
     }
 
+    .nav-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-brand h2 {
+        font-size: 1.5rem;
+    }
+
     .nav-menu {
         position: fixed;
         top: 75px;
@@ -2057,6 +2084,15 @@ ul {
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
+    }
+
+    .nav-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-brand h2 {
+        font-size: 1.3rem;
     }
 
     .hero-content h1 {
