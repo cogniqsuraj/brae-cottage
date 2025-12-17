@@ -5,22 +5,41 @@
 
 export default {
     async fetch(request, env) {
+        const corsHeaders = {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type",
+        };
+
         // Handle CORS preflight
-        if (request.method === 'OPTIONS') {
+        if (request.method === "OPTIONS") {
             return new Response(null, {
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-                    'Access-Control-Allow-Headers': 'Content-Type',
-                }
+                status: 204,
+                headers: corsHeaders,
             });
         }
 
-        // Only allow POST requests
+        // Allow GET (for browser check)
+        if (request.method === "GET") {
+            return new Response(
+                JSON.stringify({ status: "Worker is running 🚀", endpoint: "POST to /chat with {message: 'your message'}" }),
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        ...corsHeaders,
+                    },
+                }
+            );
+        }
+
+        // Only allow POST requests for API calls
         if (request.method !== 'POST') {
             return new Response(JSON.stringify({ error: 'Method not allowed' }), {
                 status: 405,
-                headers: { 'Content-Type': 'application/json' }
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...corsHeaders,
+                }
             });
         }
 
@@ -31,7 +50,10 @@ export default {
             if (!message) {
                 return new Response(JSON.stringify({ error: 'Message is required' }), {
                     status: 400,
-                    headers: { 'Content-Type': 'application/json' }
+                    headers: {
+                        'Content-Type': 'application/json',
+                        ...corsHeaders,
+                    }
                 });
             }
 
@@ -78,7 +100,7 @@ export default {
                     status: response.status,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*'
+                        ...corsHeaders,
                     }
                 });
             }
@@ -91,7 +113,7 @@ export default {
                 status: 200,
                 headers: {
                     'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*'
+                    ...corsHeaders,
                 }
             });
 
@@ -102,7 +124,7 @@ export default {
                 status: 500,
                 headers: {
                     'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*'
+                    ...corsHeaders,
                 }
             });
         }
